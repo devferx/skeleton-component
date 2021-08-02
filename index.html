@@ -14,46 +14,55 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__content">
-        <img src="./assets/images/logo.png" alt="Logo Leonidas Esteban" />
-        <h1>LEONIDAS ESTEBAN.COM</h1>
-      </div>
-    </header>
-    <section class="content">
-      <article class="article">
-        <div class="article__image-container">
-          <img
-            class="article__image"
-            src="./assets/images/image-1.jpeg"
-            alt="image 1"
-          />
-          <span class="skeleton"></span>
+    <div id="app">
+      <header class="header">
+        <div class="header__content">
+          <img src="./assets/images/logo.png" alt="Logo Leonidas Esteban" />
+          <h1>LEONIDAS ESTEBAN.COM</h1>
         </div>
-
-        <div class="article__content">
-          <h2 class="article__content__title">
-            De Figma a CSS en un click con este plugin
-            <!-- <span class="skeleton"></span> -->
-          </h2>
-
-          <div class="article__content__info">
-            <div class="article__content__info__avatar-container">
-              <img src="./assets/images/avatars/leonidas.png" alt="" />
-              <!-- <span class="skeleton"></span> -->
-            </div>
-            <p class="article__content__info__autor">
-              Leonidas
-              <!-- <span class="skeleton"></span> -->
-            </p>
-            <p>•</p>
-            <p class="article__content__info__time">
-              8 min read
-              <!-- <span class="skeleton"></span> -->
-            </p>
+      </header>
+      <section class="content">
+        <article class="article" v-for="post in posts">
+          <div class="article__image-container">
+            <img
+              class="article__image"
+              v-bind:src="post.image"
+              alt="Article cover"
+              v-if="post"
+            />
+            <span class="skeleton" v-if="!post"></span>
           </div>
-        </div>
-      </article>
-    </section>
+
+          <div class="article__content">
+            <h2 class="article__content__title">
+              <span v-if="post">{{post.title}}</span>
+              <span class="skeleton" v-if="!post"></span>
+            </h2>
+
+            <div class="article__content__info">
+              <div class="article__content__info__avatar-container">
+                <img
+                  v-bind:src="post.avatar"
+                  v-bind:alt="post.autor"
+                  v-if="post"
+                />
+                <span class="skeleton" v-if="!post"></span>
+              </div>
+              <p class="article__content__info__autor">
+                <span v-if="post">{{post.autor}}</span>
+                <span class="skeleton" v-if="!post"></span>
+              </p>
+              <p>•</p>
+              <p class="article__content__info__time">
+                <span v-if="post">{{post.time}} read</span>
+                <span class="skeleton" v-if="!post"></span>
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
