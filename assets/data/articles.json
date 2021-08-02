@@ -1,0 +1,64 @@
+[
+  {
+    "title": "De Figma a CSS en un click con este plugin",
+    "image": "/assets/images/image-1.jpeg",
+    "autor": "Leonidas",
+    "avatar" : "/assets/images/avatars/leonidas.png",
+    "time": "6 min"
+  },
+  {
+    "title": "Toma fotografías que luzcan profesionales con tu teléfono.",
+    "image": "/assets/images/image-2.jpeg",
+    "autor": "Carlos",
+    "avatar" : "/assets/images/avatars/carlos.png",
+    "time": "8 min"
+  },
+  {
+    "title": "3 libros para comenzar en UX-UI",
+    "image": "/assets/images/image-3.jpeg",
+    "autor": "uxcristopher",
+    "avatar" : "/assets/images/avatars/uxcristopher.png",
+    "time": "8 min"
+  },
+  {
+    "title": "Becas por estudiar",
+    "image": "/assets/images/image-4.jpeg",
+    "autor": "Humberto",
+    "avatar" : "/assets/images/avatars/humberto.png",
+    "time": "8 min"
+  },
+  {
+    "title": "Más que un color bonito",
+    "image": "/assets/images/image-5.jpeg",
+    "autor": "Sandra",
+    "avatar" : "/assets/images/avatars/sandra.png",
+    "time": "8 min"
+  },
+  {
+    "title": "El misterio de las APIs",
+    "image": "/assets/images/image-6.jpeg",
+    "autor": "Mafer Mazu",
+    "avatar": "/assets/images/avatars/mafer.png",
+    "time": "8 min"
+  },
+  {
+    "title": "Hola Cypress",
+    "image": "/assets/images/image-7.jpeg",
+    "autor": "Miguel",
+    "avatar" : "/assets/images/avatars/miguel.png",
+    "time": "10 min"
+  },
+  {
+    "title": "Qué hay detrás de flex:1;",
+    "image": "/assets/images/image-8.jpeg",
+    "autor": "Leonidas",
+    "avatar" : "/assets/images/avatars/leonidas.png",
+    "time": "6 min"
+  },{
+    "title": "Desearás haber comenzado hoy",
+    "image": "/assets/images/image-9.jpeg",
+    "autor": "Humberto",
+    "avatar" : "/assets/images/avatars/humberto.png",
+    "time": "8 min"
+  }
+]
