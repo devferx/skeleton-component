@@ -1,4 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
+}
+
+body {
+  background: #ecf0f1;
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  padding: 27px 0;
+  background: white;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__content h1 {
+  font: 700 18px/28px "Raleway";
+  color: #0a004e;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 62px;
+  padding: 0 16px;
+}
+
+.article {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  height: 148px;
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px #e0e2e2;
+  border-radius: 12px;
+}
+
+.article__image-container {
+  min-width: 85px;
+  width: 85px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.article__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.article__content__title {
+  width: 100%;
+  min-height: 30px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: #040b1d;
+}
+
+.article__content__info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.article__content__info__avatar-container {
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.article__content__info__avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article__content__info__autor {
+  min-width: 30px;
+  height: 20px;
+}
+
+.article__content__info__time {
+  min-width: 30px;
+  height: 20px;
+}
+
+/* Skeleton */
+.skeleton {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #d2d2d2;
+}
+
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: shine 1.5s infinite;
+  background: linear-gradient(
+    89.42deg,
+    rgba(210, 210, 210, 0) 0.5%,
+    #bdbdbd 50.52%,
+    rgba(210, 210, 210, 0) 99.5%
+  );
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
